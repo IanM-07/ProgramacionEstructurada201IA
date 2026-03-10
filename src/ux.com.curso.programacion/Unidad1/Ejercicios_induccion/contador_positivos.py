@@ -2,6 +2,10 @@
 
 # Declaracion de variables
 
+"""
+Contador positivos
+"""
+
 def contador_positivos():
     contador=0
     while True:
