@@ -9,4 +9,12 @@ def calificaciones():
     elif calificacion >=70:
         print ("Grado C")
     elif calificacion >=69:
-        
+        print ("Grado D")
+    else:
+        print(" Grado F")
+
+def main():
+    calificaciones()
+
+if __name__ == "__main__":
+    main()
