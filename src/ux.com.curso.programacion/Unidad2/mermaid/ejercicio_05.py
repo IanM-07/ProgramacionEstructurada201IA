@@ -3,7 +3,7 @@
 """
 def acumulacion():
     suma = 0
-    while suma < 500:
+    while True:
         numero = int(input("Ingrese un número:"))
         if numero >= 10 and numero <= 50:
             suma += numero
