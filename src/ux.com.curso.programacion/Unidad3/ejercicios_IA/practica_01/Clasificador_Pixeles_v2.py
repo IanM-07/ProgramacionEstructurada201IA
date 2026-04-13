@@ -5,8 +5,10 @@ UMBRAL_BAJO = 0.3
 
 def clasificador_pixeles(intensidad):
 
+   #Si la intensidad es menor a 0.0 o mayor a 1.0 es un valor invalido
     if intensidad < 0.0 or intensidad > 1.0:
         return None
+    
     if 0.0 <= intensidad < UMBRAL_BAJO:
         return "Clasificacion (Fondo Oscuro)"
         
