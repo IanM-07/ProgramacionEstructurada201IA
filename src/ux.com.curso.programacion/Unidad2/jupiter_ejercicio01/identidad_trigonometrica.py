@@ -3,16 +3,16 @@ import math
 
 def identidad_trigonometrica(x):
     numero_radianes = math.radians(x)
-    seno_x = math.pow(math.sin(numero_radianes)**2)
-    coseno_x = math.pow(math.cos(numero_radianes)**2)
+    seno_x = math.pow(math.sin(numero_radianes),2)
+    coseno_x = math.pow(math.cos(numero_radianes),2)
     identidad = seno_x + coseno_x
 
     print(f"Para x = {x} grados: (sin x)2 + (cos x)2 = {identidad}")
 
 def identidad_trigonometrica_2(x):
     numero_radianes = math.radians(x)
-    seno_x = math.pow(math.sin(numero_radianes)**2)
-    coseno_x = math.pow(math.cos(numero_radianes)**2)
+    seno_x = math.pow(math.sin(numero_radianes),2)
+    coseno_x = math.pow(math.cos(numero_radianes),2)
     identidad = seno_x - coseno_x
 
     print(f"Para x = {x} grados: (sin x)2 - (cos x)2 = {identidad}")
