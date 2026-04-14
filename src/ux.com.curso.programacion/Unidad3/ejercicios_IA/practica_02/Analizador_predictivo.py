@@ -43,18 +43,43 @@ def obtener_estadisticas(lista_datos):
     Devuelve una TUPLA con: (Valor máximo, Valor mínimo, Promedio).
     """
 # IMPLEMENTAR AQUÍ
+    if not lista_datos:
+        return (0,0,0)
+    
+    maximo = max(lista_datos)
+    minimo = min(lista_datos)
+    promedio = sum(lista_datos) / len(lista_datos)
+
+    return (maximo, minimo, promedio)
  
 def generar_reporte(total_datos, validos, estadisticas):
     """
     FUNCIÓN 4: Imprime un resumen formateado de los resultados.
     """
+    v_max, v_min, v_prom = estadisticas
+    descartados = total_datos - validos
 # IMPLEMENTAR AQUÍ
- 
+    print("*" * 30)
+    print("REPORTE DE ANALISIS PREDICTIVO")
+    print("*" * 30)
+    print(f"Total de lecturas procesadas: {total_datos}")
+    print(f"Lecturas válidas: {validos}")
+    print(f"Lecturas descartadas: {descartados}")
+    print(f"Valor máximo: {v_max:.2f}")
+    print(f"Valor mínimo: {v_min:.2f}")
+    print(f"Promedio: {v_prom:.2f}")
+    print("*" * 30)
+
 # --- LÓGICA PRINCIPAL (NO MODIFICAR ESTA PARTE) ---
+import os
 def ejecutar_pipeline():
     datos_finales = []
     cuenta_total = 0
-    with open("lecturas_sensores.txt", "r") as f:
+    # Obtener la ruta absoluta del archivo en la misma carpeta que el script
+    ruta_scrip = os.path.dirname(os.path.abspath(__file__))
+    ruta_archivo = os.path.join(ruta_scrip, "lecturas_sensores.txt")
+
+    with open(ruta_archivo, "r") as f:
         for linea in f:
             cuenta_total += 1
     valor = limpiar_dato(linea.strip())
