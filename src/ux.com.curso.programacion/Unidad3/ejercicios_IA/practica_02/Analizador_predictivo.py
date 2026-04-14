@@ -27,6 +27,12 @@ def calcular_alerta(valor_normalizado):
     y 'NORMAL' en cualquier otro caso.
     """
 # IMPLEMENTAR AQUÍ
+    if valor_normalizado > 0.8:
+        return 'CRITICO'
+    elif valor_normalizado > 0.5:
+        return 'PRECAUCION'
+    else:
+        return 'NORMAL'
  
  
 def obtener_estadisticas(lista_datos): 
