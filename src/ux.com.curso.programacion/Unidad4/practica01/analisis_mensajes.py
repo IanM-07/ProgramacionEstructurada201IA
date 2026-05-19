@@ -4,6 +4,7 @@ def mensaje():
 # 1. IMPORTACIÓN  
 # Importamos la biblioteca externa y le asignamos un alias 'np' para facilitar su uso 
 import numpy as np 
+# Prueba error: Mandara error ya que no funcionara las funciones de la libreria Numpy
 
 def procesar_estadisticas(lista_mensajes): 
     """ 
