@@ -1,7 +1,7 @@
 """
 Materia: Programación Estructurada
 Laboratorio: Refactorización y Análisis de Código (Parte III)
-Alumno: [Tu Nombre]
+Alumno: IAN LUIS MORALES CANALES
 """
 import math  # El novato solo importó math esta vez
 
